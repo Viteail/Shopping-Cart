@@ -1,0 +1,5 @@
+@import "../../../styles/colors.css";
+
+.header {
+  @apply flex justify-between items-center px-10 py-2 text-text-main bg-bg-base;
+}

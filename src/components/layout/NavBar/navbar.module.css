@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.navbar {
+  @apply flex gap-5 pr-15;
+}

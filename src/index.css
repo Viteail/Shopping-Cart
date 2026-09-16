@@ -1,1 +1,27 @@
 @import "tailwindcss";
+
+:root {
+  --margin-none: 0;
+  --padding-none: 0;
+  --box-sizing-default: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: var(--box-sizing-default);
+  margin: var(--margin-none);
+  padding: var(--padding-none);
+}
+
+body, .wrapper {
+  @apply min-h-screen;
+}
+
+.wrapper {
+  @apply flex flex-col; 
+}
+
+.main-wrapper {
+  @apply flex-1;
+}
