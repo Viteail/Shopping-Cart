@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "../../styles/colors.css";
+
+.button {
+  @apply rounded-sm cursor-pointer;
+}
+
+.primary {
+  @apply px-8 py-4 text-lg font-bold bg-primary;
+}
+
+.secondary {
+  @apply px-4 py-2 bg-secondary;
+}
+
+.primary:hover {
+  @apply bg-hover-primary;
+}
+
+.secondary:hover {
+  @apply bg-hover-secondary;
+}

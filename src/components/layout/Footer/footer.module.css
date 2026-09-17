@@ -1,5 +1,0 @@
-@import "../../../styles/colors.css";
-
-.footer {
-  @apply p-4 text-center text-text-muted bg-bg-surface;
-}

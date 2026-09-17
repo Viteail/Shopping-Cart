@@ -1,7 +1,7 @@
 import classes from "./header.module.css";
 
-import { Logo } from "../Logo";
-import { NavBar } from "../NavBar";
+import { Logo } from "../logo";
+import { NavBar } from "../nav-bar";
 
 export const Header = () => {
   return (

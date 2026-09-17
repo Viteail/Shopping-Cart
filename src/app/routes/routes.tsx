@@ -1,14 +1,17 @@
 import App from "../App";
-import Cart from "./Cart";
-import Home from "./Home";
-import Shop from "./Shop";
+import { Cart } from "./cart";
+import { Shop } from "./shop";
+import { Home } from "./home";
+
+import { Navigate } from "react-router";
 
 const routes = [
   {
     path: "/",
     element: <App />,
     children: [
-      { index: true, path: "home", element: <Home /> },
+      { path: "", element: <Navigate to="home" replace /> },
+      { path: "home", element: <Home /> },
       { path: "shop", element: <Shop /> },
       { path: "cart", element: <Cart /> },
     ],

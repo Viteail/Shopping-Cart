@@ -1,0 +1,25 @@
+@import "tailwindcss";
+@import "../../../styles/colors.css";
+
+.home {
+}
+
+.wrapper-section {
+  @apply bg-[url('../../../assets/laptop-main-img.webp')];
+}
+
+.main-section {
+  @apply flex flex-col gap-10 min-h-125 max-w-200 py-12 px-20 text-text-main;
+}
+
+.main-headline {
+  @apply font-bold text-6xl;
+}
+
+.sub-headline {
+  @apply text-xl;
+}
+
+.btns-wrapper {
+  @apply flex gap-8;
+}

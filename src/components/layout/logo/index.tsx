@@ -1,6 +1,6 @@
 import classes from "./logo.module.css";
 
-import { Image } from "../../Image";
+import { Image } from "../../image";
 
 import logoImg from "../../../assets/logo.jpg";
 
