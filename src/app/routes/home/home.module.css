@@ -23,3 +23,11 @@
 .btns-wrapper {
   @apply flex gap-8;
 }
+
+.badges-wrapper {
+  @apply flex justify-center items-center font-bold gap-10 py-3 bg-bg-light;
+}
+
+.badge-wrapper {
+  @apply flex items-center gap-2;
+}
