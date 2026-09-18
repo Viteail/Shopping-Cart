@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@import "@styles/colors.css";
+
+.wrapper-section {
+  @apply bg-[url('@images/laptop-main-img.webp')];
+}
+
+.main-section {
+  @apply flex flex-col gap-10 min-h-125 max-w-200 py-12 px-20 text-text-main;
+}
+
+.main-headline {
+  @apply font-bold text-6xl;
+}
+
+.sub-headline {
+  @apply text-xl;
+}
+
+.btns-wrapper {
+  @apply flex gap-8;
+}
+
+.badges-wrapper {
+  @apply flex justify-center items-center font-bold gap-10 py-5 bg-bg-light;
+}
+
+.badge-wrapper {
+  @apply flex items-center gap-2;
+}
+
+.category-container {
+  @apply flex justify-center;
+}
+
+.category-wrapper {
+  @apply flex flex-col gap-5 py-16;
+}
+
+.cards-wrapper {
+  @apply flex gap-10;
+}
+
+.category-headline {
+  @apply font-extrabold text-xl;
+}
+
+.about-container {
+  @apply flex justify-center text-text-main bg-primary;
+}
+
+.about-wrapper {
+  @apply flex max-w-250 gap-20 py-10;
+}
+
+.about-img-wrapper {
+  @apply flex items-center min-w-125;
+}
+
+.about-info-wrapper {
+  @apply flex flex-col gap-5;
+}
+
+.about-main-headline {
+  @apply font-black text-4xl;
+}
+
+.about-subheadline {
+  @apply font-semibold text-xl;
+}
+
+.about-text {
+  @apply text-xl;
+}

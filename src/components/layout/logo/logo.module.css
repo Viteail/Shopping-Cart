@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.logo {
+  @apply w-20;
+}
