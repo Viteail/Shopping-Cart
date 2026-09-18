@@ -1,8 +1,8 @@
 import classes from "./logo.module.css";
 
-import { Image } from "../../image";
+import { Image } from "@components/index";
 
-import logoImg from "../../../assets/logo.jpg";
+import logoImg from "@images/logo.jpg";
 
 export const Logo = () => {
   return (
