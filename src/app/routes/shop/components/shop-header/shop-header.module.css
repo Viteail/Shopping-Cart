@@ -1,0 +1,18 @@
+@import "tailwindcss";
+@import "@styles/colors.css";
+
+.shop-header {
+  @apply flex justify-center py-8 bg-bg-light;
+}
+
+.shop-wrapper {
+  @apply flex gap-20;
+}
+
+.btns-wrapper {
+  @apply flex items-center gap-8;
+}
+
+.main-headline {
+  @apply font-bold text-xl;
+}

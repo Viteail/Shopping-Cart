@@ -11,8 +11,8 @@ export const MainSection = () => {
           headphones designed to keep you ahead.
         </p>
         <div className={classes["btns-wrapper"]}>
-          <Button primary>Shop Laptops</Button>
-          <Button secondary>Discover TechStore</Button>
+          <Button classesToAppend={["primary"]}>Shop Laptops</Button>
+          <Button classesToAppend={["secondary"]}>Discover TechStore</Button>
         </div>
       </div>
     </div>

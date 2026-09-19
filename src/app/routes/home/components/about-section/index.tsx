@@ -30,7 +30,7 @@ export const AboutSection = () => {
             premium headphones, we curate only the best for tech enthusiasts and
             everyday users alike.
           </p>
-          <Button secondary>Start Exploring</Button>
+          <Button classesToAppend={["secondary"]}>Start Exploring</Button>
         </div>
       </div>
     </div>

@@ -1,23 +1,23 @@
 import classes from "./button.module.css";
 import { cn } from "../../utils/cn.ts";
 
+type AvailableClass = "primary" | "secondary" | "category" | "active";
+
 interface IButonProps {
   children: React.ReactNode;
   onClick?: () => void;
-  primary?: boolean;
-  secondary?: boolean;
+  classesToAppend?: AvailableClass[];
 }
 
 export const Button: React.FC<IButonProps> = (props) => {
-  const { children, onClick, primary = false, secondary = false } = props;
+  const { children, onClick, classesToAppend = [] } = props;
 
   return (
     <div>
       <button
         className={cn(classes, [
           classes.button,
-          `${primary && classes.primary}`,
-          `${secondary && classes.secondary}`,
+          ...classesToAppend.map((key) => classes[key]),
         ])}
         onClick={onClick}
       >

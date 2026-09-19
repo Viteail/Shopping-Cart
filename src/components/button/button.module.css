@@ -13,6 +13,14 @@
   @apply px-4 py-2 bg-secondary;
 }
 
+.category {
+  @apply text-text-muted text-xl;
+}
+
+.category.active {
+  @apply text-black;
+}
+
 .primary:hover {
   @apply bg-hover-primary;
 }
