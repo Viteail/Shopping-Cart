@@ -1,7 +1,10 @@
-import { Button } from "@components/index";
+import { Button, ButtonLink } from "@components/index";
 import classes from "../../home.module.css";
+import { useNavigateToShop } from "../../hooks/navigateToShop";
 
 export const MainSection = () => {
+  const { handleShopNavigation } = useNavigateToShop();
+
   return (
     <div className={classes["wrapper-section"]}>
       <div className={classes["main-section"]}>
@@ -11,8 +14,10 @@ export const MainSection = () => {
           headphones designed to keep you ahead.
         </p>
         <div className={classes["btns-wrapper"]}>
-          <Button classesToAppend={["primary"]}>Shop Laptops</Button>
-          <Button classesToAppend={["secondary"]}>Discover TechStore</Button>
+          <Button onClick={handleShopNavigation} classesToAppend={["primary"]}>
+            Discover Shop
+          </Button>
+          <ButtonLink href="about-store">Discover TechStore</ButtonLink>
         </div>
       </div>
     </div>

@@ -3,10 +3,13 @@ import classes from "../../home.module.css";
 import { Button } from "@components/index";
 
 import aboutImg from "@images/about-workplace.webp";
+import { useNavigateToShop } from "../../hooks/navigateToShop";
 
 export const AboutSection = () => {
+  const { handleShopNavigation } = useNavigateToShop();
+
   return (
-    <div className={classes["about-container"]}>
+    <div id="about-store" className={classes["about-container"]}>
       <div className={classes["about-wrapper"]}>
         <div className={classes["about-img-wrapper"]}>
           <img
@@ -30,7 +33,12 @@ export const AboutSection = () => {
             premium headphones, we curate only the best for tech enthusiasts and
             everyday users alike.
           </p>
-          <Button classesToAppend={["secondary"]}>Start Exploring</Button>
+          <Button
+            onClick={handleShopNavigation}
+            classesToAppend={["secondary"]}
+          >
+            Start Exploring
+          </Button>
         </div>
       </div>
     </div>
