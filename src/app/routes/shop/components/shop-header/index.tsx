@@ -2,21 +2,16 @@ import classes from "./shop-header.module.css";
 
 import { Button } from "@components/index";
 
-import type { Category } from "../../types";
+import type { ActiveCategory, ProductsCategories } from "@/types/index";
 import type { AvailableClass } from "@components/button";
 
-interface IShopState {
-  handleActiveCategory: (category: Category) => void;
-  activeCategory: Category;
-}
-
 interface IShopHeaderProps {
-  shopState: IShopState;
+  handleActiveCategory: (category: ProductsCategories[]) => void;
+  activeCategory: ActiveCategory;
 }
 
 export const ShopHeader: React.FC<IShopHeaderProps> = (props) => {
-  const { shopState } = props;
-  const { activeCategory, handleActiveCategory } = shopState;
+  const { activeCategory, handleActiveCategory } = props;
 
   return (
     <div className={classes["shop-header"]}>
@@ -24,31 +19,42 @@ export const ShopHeader: React.FC<IShopHeaderProps> = (props) => {
         <h1 className={classes["main-headline"]}>Categories</h1>
         <div className={classes["btns-wrapper"]}>
           <Button
-            onClick={() => handleActiveCategory("Laptops")}
+            onClick={() =>
+              handleActiveCategory(["laptop", "smartphone", "audio"])
+            }
             classesToAppend={
-              [
-                "category",
-                `${activeCategory === "Laptops" && "active"}`,
-              ].filter(Boolean) as AvailableClass[]
+              ["category", `${activeCategory === "all" && "active"}`].filter(
+                Boolean,
+              ) as AvailableClass[]
+            }
+          >
+            All
+          </Button>
+          <Button
+            onClick={() => handleActiveCategory(["laptop"])}
+            classesToAppend={
+              ["category", `${activeCategory === "laptop" && "active"}`].filter(
+                Boolean,
+              ) as AvailableClass[]
             }
           >
             Laptops
           </Button>
           <Button
-            onClick={() => handleActiveCategory("Smartphones")}
+            onClick={() => handleActiveCategory(["smartphone"])}
             classesToAppend={
               [
                 "category",
-                `${activeCategory === "Smartphones" && "active"}`,
+                `${activeCategory === "smartphone" && "active"}`,
               ].filter(Boolean) as AvailableClass[]
             }
           >
             Smartphones
           </Button>
           <Button
-            onClick={() => handleActiveCategory("Audio")}
+            onClick={() => handleActiveCategory(["audio"])}
             classesToAppend={
-              ["category", `${activeCategory === "Audio" && "active"}`].filter(
+              ["category", `${activeCategory === "audio" && "active"}`].filter(
                 Boolean,
               ) as AvailableClass[]
             }

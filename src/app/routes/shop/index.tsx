@@ -1,12 +1,17 @@
+import { useProductData } from "../../contexts/product-context";
 import { ShopHeader } from "./components/shop-header";
-
-import { useCategory } from "./hooks/useCategory";
+import { ShopMain } from "./components/shop-main";
 
 export const Shop = () => {
-  const { activeCategory, handleActiveCategory } = useCategory();
+  const { data, status, onClick, activeCategory } = useProductData();
+
   return (
     <div>
-      <ShopHeader shopState={{ activeCategory, handleActiveCategory }} />
+      <ShopHeader
+        activeCategory={activeCategory}
+        handleActiveCategory={onClick}
+      />
+      <ShopMain activeCategory={activeCategory}></ShopMain>
     </div>
   );
 };

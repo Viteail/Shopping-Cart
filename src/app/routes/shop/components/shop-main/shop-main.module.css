@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.main-wrapper {
+  @apply flex max-w-200;
+}
+
+.main-container {
+  @apply flex flex-col flex-wrap gap-8;
+}

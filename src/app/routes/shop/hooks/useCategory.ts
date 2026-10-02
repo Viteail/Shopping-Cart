@@ -1,13 +1,12 @@
+import type { ActiveCategory, ProductsCategories } from "@/types/index";
 import { useState } from "react";
 
-import type { Category } from "../types";
+export const useCategory = (cats: ProductsCategories[]) => {
+  const [activeCategory, setActiveCategory] = useState<ActiveCategory>(() => {
+    if (cats.length === 3) return "all";
+    else return cats[0];
+  });
+  console.log("cat", activeCategory);
 
-export const useCategory = () => {
-  const [activeCategory, setActiveCategory] = useState<Category>("Laptops");
-
-  const handleActiveCategory = (category: Category) => {
-    setActiveCategory(category);
-  };
-
-  return { activeCategory, handleActiveCategory };
+  return { activeCategory, setActiveCategory };
 };
