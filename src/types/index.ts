@@ -2,6 +2,8 @@ export type ProductsCategories = "laptop" | "smartphone" | "audio";
 
 export type ActiveCategory = ProductsCategories | "all";
 
+
+
 export interface IProductData {
   id: number;
   title: string;

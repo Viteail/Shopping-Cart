@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 .main-wrapper {
-  @apply flex max-w-200;
+  @apply flex justify-center py-20;
 }
 
 .main-container {
-  @apply flex flex-col flex-wrap gap-8;
+  @apply grid grid-cols-[repeat(auto-fill,320px)] justify-center gap-8 w-full max-w-300;
 }

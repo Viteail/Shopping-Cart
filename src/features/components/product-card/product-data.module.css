@@ -1,0 +1,54 @@
+@import "tailwindcss";
+@import "@styles/colors.css";
+
+.product-wrapper {
+  @apply flex flex-col gap-5 w-80 min-h-117.5 p-4 border rounded-xl border-solid border-secondary;
+}
+
+.product-img-wrapper {
+  @apply flex justify-center items-center;
+}
+
+.product-img {
+  @apply w-80;
+}
+
+.discount-price-wrapper {
+  @apply flex gap-5;
+}
+
+.price {
+  @apply line-through text-text-muted;
+}
+
+.from-discount-price-wrapper {
+  @apply flex gap-2 border rounded-sm border-solid border-primary;
+}
+
+.discount {
+  @apply px-1 text-text-main bg-primary;
+}
+
+.discount-price {
+  @apply pr-1;
+}
+
+.final-price {
+  @apply text-xl font-semibold;
+}
+
+.product-title {
+  @apply text-2xl whitespace-nowrap overflow-hidden text-ellipsis;
+}
+
+.product-footer {
+  @apply flex items-center gap-2;
+}
+
+.btns-wrapper {
+  @apply flex gap-1;
+}
+
+.cart-wrapper {
+  @apply flex justify-end w-full;
+}

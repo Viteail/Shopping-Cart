@@ -11,7 +11,7 @@ export const Shop = () => {
         activeCategory={activeCategory}
         handleActiveCategory={onClick}
       />
-      <ShopMain activeCategory={activeCategory}></ShopMain>
+      <ShopMain productDatas={data} status={status}></ShopMain>
     </div>
   );
 };

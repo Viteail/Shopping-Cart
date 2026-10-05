@@ -1,17 +1,29 @@
 import classes from "./shop-main.module.css";
 
-import type { ActiveCategory } from "@/types/index";
+import { ShopLoading } from "../shop-loading";
+import { ProductCard } from "@features/components/product-card";
+
+import type { FetchStatus, IProductData } from "@/types/index";
 
 interface IShopMainProps {
-  activeCategory: ActiveCategory;
+  productDatas: IProductData[];
+  status: FetchStatus;
 }
 
 export const ShopMain: React.FC<IShopMainProps> = (props) => {
-  const { activeCategory } = props;
+  const { productDatas, status } = props;
 
   return (
     <div className={classes["main-wrapper"]}>
-      <div className={classes["main-container"]}></div>
+      <div className={classes["main-container"]}>
+        {status === "loading" ? (
+          <ShopLoading />
+        ) : (
+          productDatas.map((data) => (
+            <ProductCard data={data} key={data.id}></ProductCard>
+          ))
+        )}
+      </div>
     </div>
   );
 };

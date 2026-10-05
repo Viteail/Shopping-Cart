@@ -1,7 +1,14 @@
 import classes from "./button.module.css";
 import { cn } from "../../utils/cn.ts";
 
-export type AvailableClass = "primary" | "secondary" | "category" | "active";
+export type AvailableClass =
+  | "primary"
+  | "secondary"
+  | "category"
+  | "active"
+  | "increment"
+  | "decrement"
+  | "cart";
 
 interface IButonProps {
   children: React.ReactNode;
