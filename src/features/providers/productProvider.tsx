@@ -65,7 +65,6 @@ const useProductsRepo = (cats: ProductsCategories[]) => {
       );
 
       const flatData = res.flatMap((r) => r.products);
-      console.log("test", flatData);
       setProductData({ data: flatData, status: "finished" });
     } catch {
       setProductData({ data: [], status: "error" });

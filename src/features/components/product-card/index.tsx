@@ -9,12 +9,23 @@ import cartIcon from "@images/cart.svg";
 import plusIcon from "@images/plus.svg";
 import minusIcon from "@images/minus.svg";
 
+import { useInputState } from "@hooks/useInputState";
+import { useCartProductData } from "../../../app/contexts/cart-product-context";
+
 interface IProductDataProps {
   data: IProductData;
 }
 
 export const ProductCard: React.FC<IProductDataProps> = (props) => {
   const { data } = props;
+  const {
+    inputValue,
+    handleIncrementValue,
+    handleDecrementValue,
+    handleInputChange,
+  } = useInputState();
+
+  const { handleAddToCart } = useCartProductData();
 
   const getPriceFromDiscount = (price: number, discountPercentage: number) =>
     Math.round(((price * discountPercentage) / 100) * 100) / 100;
@@ -48,18 +59,31 @@ export const ProductCard: React.FC<IProductDataProps> = (props) => {
       </div>
       <div className={classes["product-footer"]}>
         <div className={classes["btns-wrapper"]}>
-          <Button classesToAppend={["increment"]}>
+          <Button
+            onClick={() => handleIncrementValue()}
+            classesToAppend={["increment"]}
+          >
             <img src={plusIcon} alt="plus" />
           </Button>
-          <Button classesToAppend={["decrement"]}>
+          <Button
+            onClick={() => handleDecrementValue()}
+            classesToAppend={["decrement"]}
+          >
             <img src={minusIcon} alt="minus" />
           </Button>
         </div>
         <div>
-          <Input type="number" />
+          <Input
+            type="number"
+            value={inputValue}
+            onChange={handleInputChange}
+          />
         </div>
         <div className={classes["cart-wrapper"]}>
-          <Button classesToAppend={["cart"]}>
+          <Button
+            onClick={() => handleAddToCart(data, inputValue)}
+            classesToAppend={["cart"]}
+          >
             <img src={cartIcon} alt="cart" />
           </Button>
         </div>

@@ -6,7 +6,6 @@ export const useCategory = (cats: ProductsCategories[]) => {
     if (cats.length === 3) return "all";
     else return cats[0];
   });
-  console.log("cat", activeCategory);
 
   return { activeCategory, setActiveCategory };
 };
