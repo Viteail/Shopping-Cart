@@ -13,6 +13,18 @@
   @apply w-80;
 }
 
+.product-warranty-wrapper {
+  @apply flex;
+}
+
+.arrow-right {
+  @apply w-0 h-0 border-y-14 border-y-transparent border-l-20 border-l-accent-glow;
+}
+
+.product-warranty {
+  @apply flex items-center text-base px-4 rounded-l-xl text-text-main bg-accent-glow;
+}
+
 .discount-price-wrapper {
   @apply flex gap-5;
 }

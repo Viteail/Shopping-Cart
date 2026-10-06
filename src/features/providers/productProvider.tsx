@@ -89,6 +89,7 @@ const productsMapper = (dto: ProductDTO[]): IProductData[] =>
     stock: d.stock,
     price: d.price,
     image: d.images[0],
+    warrantyInformation: d.warrantyInformation,
   }));
 
 export const ProductDataProvider: React.FC<IProductDataProviderProps> = (

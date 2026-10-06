@@ -40,6 +40,12 @@ export const ProductCard: React.FC<IProductDataProps> = (props) => {
       <div className={classes["product-img-wrapper"]}>
         <img className={classes["product-img"]} src={data.image} />
       </div>
+      <div className={classes["product-warranty-wrapper"]}>
+        <p className={classes["product-warranty"]}>
+          {data.warrantyInformation}
+        </p>
+        <div className={classes["arrow-right"]}></div>
+      </div>
       <div>
         <p className={classes["product-title"]}>{data.title}</p>
       </div>

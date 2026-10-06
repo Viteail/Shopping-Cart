@@ -9,6 +9,7 @@ export interface IProductData {
   discountPercentage: number;
   stock: number;
   image: string;
+  warrantyInformation: string; 
 }
 
 export interface ICartProductData {
