@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@import "@styles/colors.css";
+@import "../../index.css";
+
+.input {
+  @apply no-spinner field-sizing-content text-center text-text-dark min-w-15 max-w-30 px-2 border rounded-xl border-solid border-secondary;
+}
+
+.input:focus {
+  @apply outline-none text-black border-primary;
+}

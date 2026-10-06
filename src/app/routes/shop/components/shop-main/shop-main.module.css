@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.main-wrapper {
+  @apply flex justify-center py-20;
+}
+
+.main-container {
+  @apply grid grid-cols-[repeat(auto-fill,320px)] justify-center gap-8 w-full max-w-300;
+}
+
+.main-loading {
+  @apply flex justify-center w-full max-w-300;
+}

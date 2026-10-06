@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "@styles/colors.css";
+
+.shop-loading {
+  @apply p-12;
+}
+
+.loader {
+  @apply h-10 w-10 rounded-full border-4 border-light-accent-glow border-t-accent-glow animate-[spin_1s_linear_infinite];
+}

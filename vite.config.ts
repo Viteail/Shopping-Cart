@@ -12,6 +12,9 @@ export default defineConfig({
       "@styles": path.resolve(import.meta.dirname, "src/styles"),
       "@images": path.resolve(import.meta.dirname, "./src/assets"),
       "@components": path.resolve(import.meta.dirname, "./src/components/"),
+      "@/types": path.resolve(import.meta.dirname, "./src/types/"),
+      "@hooks": path.resolve(import.meta.dirname, "./src/hooks/"),
+      "@features": path.resolve(import.meta.dirname, "./src/features/"),
     },
   },
   test: {

@@ -15,14 +15,42 @@
   padding: var(--padding-none);
 }
 
-body, .wrapper {
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+.wrapper {
   @apply min-h-screen;
 }
 
 .wrapper {
-  @apply flex flex-col; 
+  @apply flex flex-col;
 }
 
 .main-wrapper {
   @apply flex-1;
+}
+
+@utility no-spinner {
+  -moz-appearance: textfield;
+  
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+@theme {
+  --animate-spin-fast: spin 1s linear infinite;
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 }

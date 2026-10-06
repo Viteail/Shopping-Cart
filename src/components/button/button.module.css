@@ -13,10 +13,62 @@
   @apply px-4 py-2 bg-secondary;
 }
 
+.category {
+  @apply text-text-muted text-xl;
+}
+
+.category.active {
+  @apply text-black;
+}
+
 .primary:hover {
   @apply bg-hover-primary;
 }
 
 .secondary:hover {
   @apply bg-hover-secondary;
+}
+
+.increment > img,
+.decrement > img {
+  @apply w-7.5;
+}
+
+.increment,
+.decrement {
+  @apply text-xl w-8 h-8 p-1.5 border rounded-xl border-solid;
+}
+
+.increment {
+  @apply border-secondary;
+}
+
+.decrement {
+  @apply border-secondary-red;
+}
+
+.increment:hover {
+  @apply bg-hover-secondary border-hover-secondary;
+}
+
+.decrement:hover {
+  @apply bg-hover-secondary-red border-hover-secondary-red;
+}
+
+.increment:hover > img,
+.decrement:hover > img {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(21%) saturate(142%)
+    hue-rotate(176deg) brightness(101%) contrast(97%);
+}
+
+.cart > img {
+  @apply w-7.5;
+}
+
+.cart {
+  @apply p-1 border rounded-xl border-solid border-secondary;
+}
+
+.cart:hover {
+  @apply border-primary;
 }

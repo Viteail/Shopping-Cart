@@ -1,5 +1,3 @@
-import classes from "./home.module.css";
-
 import { MainSection } from "./components/main-section";
 import { BadgesSection } from "./components/badges-section";
 import { CategorySection } from "./components/category-section";
