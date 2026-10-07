@@ -30,4 +30,5 @@ export type CardProductContextState = {
   data: ICartProductData[];
   handleAddToCart: (product: IProductData, amount: number) => void;
   handleChangeAmount: (product: IProductData, amount: number) => void;
+  handleRemoveProduct: (product: IProductData) => void;
 };

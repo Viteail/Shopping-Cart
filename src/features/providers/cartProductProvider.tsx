@@ -47,11 +47,22 @@ export const CartProductDataProvider: React.FC<
     else setCartProducts((prev) => [...prev, cartProduct]);
   };
 
+  const handleRemoveProduct = (product: IProductData) => {
+    setCartProducts(
+      cartProducts.filter((item) => item.product.id !== product.id),
+    );
+  };
+
   console.log("cart products", cartProducts);
 
   return (
     <CartProductContext.Provider
-      value={{ data: cartProducts, handleAddToCart, handleChangeAmount }}
+      value={{
+        data: cartProducts,
+        handleAddToCart,
+        handleChangeAmount,
+        handleRemoveProduct,
+      }}
     >
       {children}
     </CartProductContext.Provider>

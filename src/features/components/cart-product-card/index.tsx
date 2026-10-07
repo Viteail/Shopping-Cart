@@ -24,7 +24,7 @@ export const CartProductCard: React.FC<ICartProductCardProps> = (props) => {
   const { itemData } = props;
   const product = itemData.product;
 
-  const { handleChangeAmount } = useCartProductData();
+  const { handleChangeAmount, handleRemoveProduct } = useCartProductData();
 
   const {
     inputValue,
@@ -86,7 +86,10 @@ export const CartProductCard: React.FC<ICartProductCardProps> = (props) => {
           </Button>
         </div>
         <div>
-          <Button classesToAppend={["remove"]}>
+          <Button
+            onClick={() => handleRemoveProduct(product)}
+            classesToAppend={["remove"]}
+          >
             <img src={removeIcon} alt="remove" />
           </Button>
         </div>
