@@ -1,0 +1,42 @@
+@import "tailwindcss";
+@import "@styles/colors.css";
+
+.product-card-wrapper {
+  @apply flex items-center gap-4 border-b border-solid border-light-border;
+}
+
+.product-img {
+  @apply h-25;
+}
+
+.product-headlines-wrapper {
+  @apply flex flex-col gap-2 max-w-75;
+}
+
+.product-title {
+  @apply whitespace-nowrap overflow-hidden text-ellipsis;
+}
+
+.product-price-wrapper {
+  @apply flex items-center gap-4;
+}
+
+.price {
+  @apply line-through text-sm text-text-muted;
+}
+
+.discount-price {
+  @apply font-bold;
+}
+
+.discount-wrapper {
+  @apply rounded-sm px-1 bg-primary text-text-main;
+}
+
+.product-quantity-wrapper {
+  @apply flex items-center gap-2;
+}
+
+.product-footer {
+  @apply flex-1 flex justify-end gap-10;
+}

@@ -8,7 +8,8 @@ export type AvailableClass =
   | "active"
   | "increment"
   | "decrement"
-  | "cart";
+  | "cart"
+  | "remove";
 
 interface IButonProps {
   children: React.ReactNode;

@@ -15,28 +15,43 @@ export const CartProductDataProvider: React.FC<
 
   const [cartProducts, setCartProducts] = useState<ICartProductData[]>([]);
 
+  const hasProductInCart = (product: IProductData) => {
+    return cartProducts.some((item) => item.product.id === product.id);
+  };
+
+  const handleChangeAmount = (
+    product: IProductData,
+    amount: number,
+    add: boolean = false,
+  ) => {
+    const tempCartProducts = [...cartProducts];
+
+    const foundItemIndex = tempCartProducts.find(
+      (item) => item.product.id === product.id,
+    );
+
+    if (foundItemIndex) {
+      if (add) foundItemIndex.amount += amount;
+      else foundItemIndex.amount = amount;
+      setCartProducts(tempCartProducts);
+    }
+  };
+
   const handleAddToCart = (product: IProductData, amount: number) => {
     const cartProduct = {
       product,
       amount,
     };
 
-    const tempCartProducts = [...cartProducts];
-    const foundItemIndex = tempCartProducts.find(
-      (item) => item.product.id === product.id,
-    );
-
-    if (foundItemIndex) {
-      foundItemIndex.amount += amount;
-      setCartProducts(tempCartProducts);
-    } else setCartProducts((prev) => [...prev, cartProduct]);
+    if (hasProductInCart(product)) handleChangeAmount(product, amount, true);
+    else setCartProducts((prev) => [...prev, cartProduct]);
   };
 
   console.log("cart products", cartProducts);
 
   return (
     <CartProductContext.Provider
-      value={{ data: cartProducts, handleAddToCart }}
+      value={{ data: cartProducts, handleAddToCart, handleChangeAmount }}
     >
       {children}
     </CartProductContext.Provider>

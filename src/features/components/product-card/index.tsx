@@ -11,6 +11,10 @@ import minusIcon from "@images/minus.svg";
 
 import { useInputState } from "@hooks/useInputState";
 import { useCartProductData } from "../../../app/contexts/cart-product-context";
+import {
+  getPriceAfterDiscount,
+  getPriceFromDiscount,
+} from "../../../utils/price";
 
 interface IProductDataProps {
   data: IProductData;
@@ -27,18 +31,14 @@ export const ProductCard: React.FC<IProductDataProps> = (props) => {
 
   const { handleAddToCart } = useCartProductData();
 
-  const getPriceFromDiscount = (price: number, discountPercentage: number) =>
-    Math.round(((price * discountPercentage) / 100) * 100) / 100;
-
-  const getPriceAfterDiscount = (price: number, discountPercentage: number) =>
-    Math.round(
-      (price - getPriceFromDiscount(price, discountPercentage)) * 100,
-    ) / 100;
-
   return (
     <div className={classes["product-wrapper"]}>
       <div className={classes["product-img-wrapper"]}>
-        <img className={classes["product-img"]} src={data.image} />
+        <img
+          className={classes["product-img"]}
+          src={data.image}
+          alt="product"
+        />
       </div>
       <div className={classes["product-warranty-wrapper"]}>
         <p className={classes["product-warranty"]}>
@@ -81,13 +81,13 @@ export const ProductCard: React.FC<IProductDataProps> = (props) => {
         <div>
           <Input
             type="number"
-            value={inputValue}
+            value={inputValue.displayValue}
             onChange={handleInputChange}
           />
         </div>
         <div className={classes["cart-wrapper"]}>
           <Button
-            onClick={() => handleAddToCart(data, inputValue)}
+            onClick={() => handleAddToCart(data, inputValue.numberValue)}
             classesToAppend={["cart"]}
           >
             <img src={cartIcon} alt="cart" />
