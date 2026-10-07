@@ -15,6 +15,7 @@ export default defineConfig({
       "@/types": path.resolve(import.meta.dirname, "./src/types/"),
       "@hooks": path.resolve(import.meta.dirname, "./src/hooks/"),
       "@features": path.resolve(import.meta.dirname, "./src/features/"),
+      "@utils": path.resolve(import.meta.dirname, "./src/utils/"),
     },
   },
   test: {

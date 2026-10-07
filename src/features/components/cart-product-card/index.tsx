@@ -3,7 +3,7 @@ import classes from "./cart-product-card.module.css";
 import { Button } from "@components/button";
 import { Input } from "@components/input";
 
-import { getPriceAfterDiscount, getTotalPrice } from "../../../utils/price";
+import { getPriceAfterDiscount, getTotalPrice } from "@utils/price";
 
 import type { ICartProductData } from "@/types/index";
 

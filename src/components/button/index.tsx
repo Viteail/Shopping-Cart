@@ -1,5 +1,5 @@
 import classes from "./button.module.css";
-import { cn } from "../../utils/cn.ts";
+import { cn } from "@utils/cn";
 
 export type AvailableClass =
   | "primary"
@@ -9,7 +9,7 @@ export type AvailableClass =
   | "increment"
   | "decrement"
   | "cart"
-  | "remove";
+  | "remove"
 
 interface IButonProps {
   children: React.ReactNode;

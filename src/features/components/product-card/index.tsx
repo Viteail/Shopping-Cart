@@ -14,7 +14,7 @@ import { useCartProductData } from "../../../app/contexts/cart-product-context";
 import {
   getPriceAfterDiscount,
   getPriceFromDiscount,
-} from "../../../utils/price";
+} from "@utils/price";
 
 interface IProductDataProps {
   data: IProductData;
