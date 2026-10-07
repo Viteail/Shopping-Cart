@@ -1,4 +1,5 @@
 import { useCartProductData } from "../../contexts/cart-product-context";
+import { CartEmpty } from "./components/cart-empty";
 import { CartHeader } from "./components/cart-header";
 import { CartMain } from "./components/cart-main";
 
@@ -8,7 +9,7 @@ export const Cart = () => {
   return (
     <div>
       <CartHeader />
-      <CartMain data={data} />
+      {!data.length ? <CartEmpty /> : <CartMain data={data} />}
     </div>
   );
 };

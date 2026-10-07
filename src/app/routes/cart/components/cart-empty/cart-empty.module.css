@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+.cart-empty-wrapper {
+  @apply flex justify-center py-8;
+}
+
+.cart-empty-headline {
+  @apply font-bold text-xl;
+}
