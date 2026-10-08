@@ -2,7 +2,7 @@
 @import "@styles/colors.css";
 
 .main-wrapper {
-  @apply flex justify-center py-8;
+  @apply flex flex-col items-center py-8;
 }
 
 .main-content {

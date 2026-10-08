@@ -3,6 +3,7 @@ import { useState } from "react";
 import type { ICartProductData, IProductData } from "@/types/index";
 
 import { CartProductContext } from "../../app/contexts/cart-product-context";
+import { getPriceAfterDiscount } from "@utils/price";
 
 interface ICartProductDataProviderProps {
   children: React.ReactNode;
@@ -53,7 +54,19 @@ export const CartProductDataProvider: React.FC<
     );
   };
 
-  console.log("cart products", cartProducts);
+  const handleEmptyCart = () => {
+    setCartProducts([]);
+  };
+
+  const getTotalPriceProducts = () =>
+    cartProducts.reduce((acc, curr) => {
+      const priceAfterDiscount = getPriceAfterDiscount(
+        curr.product.price,
+        curr.product.discountPercentage,
+      );
+
+      return Number((acc + priceAfterDiscount * curr.amount).toFixed(2));
+    }, 0);
 
   return (
     <CartProductContext.Provider
@@ -62,6 +75,8 @@ export const CartProductDataProvider: React.FC<
         handleAddToCart,
         handleChangeAmount,
         handleRemoveProduct,
+        handleEmptyCart,
+        getTotalPriceProducts,
       }}
     >
       {children}

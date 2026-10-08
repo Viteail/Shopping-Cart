@@ -1,6 +1,8 @@
 import classes from "./cart-main.module.css";
 
+import { CartCheckout } from "../cart-checkout";
 import { CartProductCard } from "@features/components/cart-product-card";
+
 import type { ICartProductData } from "@/types/index";
 
 interface ICartMainProps {
@@ -19,6 +21,7 @@ export const CartMain: React.FC<ICartMainProps> = (props) => {
           ></CartProductCard>
         ))}
       </div>
+      <CartCheckout />
     </div>
   );
 };
