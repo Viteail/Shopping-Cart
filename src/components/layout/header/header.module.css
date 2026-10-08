@@ -1,5 +1,22 @@
+@import "tailwindcss";
 @import "@styles/colors.css";
 
 .header {
-  @apply flex justify-between items-center px-10 py-2 text-text-main bg-bg-base;
+  @apply flex justify-center px-10 py-5 text-text-main bg-bg-base;
+}
+
+.wrapper {
+  @apply max-w-300 w-full flex justify-between items-center;
+}
+
+.logo-container {
+  @apply flex items-center gap-2;
+}
+
+.logo-text {
+  @apply text-xl font-bold;
+}
+
+.logo {
+  @apply w-12 h-12;
 }
