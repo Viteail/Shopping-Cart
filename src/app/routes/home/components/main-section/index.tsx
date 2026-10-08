@@ -1,5 +1,8 @@
-import { Button, ButtonLink } from "@components/index";
 import classes from "../../home.module.css";
+
+import { Button } from "@components/button";
+import { ButtonLink } from "@components/btn-link";
+
 import { useNavigateToShop } from "../../hooks/navigateToShop";
 
 export const MainSection = () => {

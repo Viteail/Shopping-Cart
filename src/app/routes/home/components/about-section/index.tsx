@@ -1,6 +1,6 @@
 import classes from "../../home.module.css";
 
-import { Button } from "@components/index";
+import { Button } from "@components/button";
 
 import aboutImg from "@images/about-workplace.webp";
 import { useNavigateToShop } from "../../hooks/navigateToShop";

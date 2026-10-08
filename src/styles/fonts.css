@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Roboto;
+  src: url("../assets/fonts/Roboto-VariableFont_wdth,wght.ttf");
+}
+
+@font-face {
+  font-family: Montserrat;
+  src: url("../assets/fonts/Montserrat-VariableFont_wght.ttf");
+}
+
+@theme {
+  --font-roboto: "Roboto", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
