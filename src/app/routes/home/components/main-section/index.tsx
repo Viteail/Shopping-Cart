@@ -1,4 +1,4 @@
-import classes from "../../home.module.css";
+import classes from "./main-section.module.css";
 
 import { Button } from "@components/button";
 import { ButtonLink } from "@components/btn-link";

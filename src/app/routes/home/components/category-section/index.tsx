@@ -1,4 +1,4 @@
-import classes from "../../home.module.css";
+import classes from "./catergory-section.module.css";
 
 import { CatergorieCard } from "../categorie-card/";
 

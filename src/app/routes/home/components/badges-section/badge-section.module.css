@@ -1,0 +1,10 @@
+@import "tailwindcss";
+@import "@styles/colors.css";
+
+.badges-wrapper {
+  @apply flex justify-center items-center font-bold gap-10 py-5 bg-bg-light;
+}
+
+.badge-wrapper {
+  @apply flex items-center gap-2;
+}

@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+.category-container {
+  @apply flex justify-center;
+}
+
+.category-wrapper {
+  @apply flex flex-col gap-5 py-16;
+}
+
+.cards-wrapper {
+  @apply flex gap-10;
+}
+
+.category-headline {
+  @apply font-extrabold text-xl;
+}

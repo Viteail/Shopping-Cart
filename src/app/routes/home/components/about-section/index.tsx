@@ -1,4 +1,4 @@
-import classes from "../../home.module.css";
+import classes from "./about-section.module.css";
 
 import { Button } from "@components/button";
 

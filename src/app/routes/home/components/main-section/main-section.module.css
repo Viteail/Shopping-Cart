@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "@styles/colors.css";
+
+.wrapper-section {
+  @apply flex justify-center bg-bg-surface;
+}
+
+.main-section {
+  @apply flex flex-col gap-10 min-h-125 max-w-(--max-layout-width) w-full py-12 px-20 text-text-main;
+}
+
+.main-headline {
+  @apply font-bold text-6xl;
+}
+
+.sub-headline {
+  @apply text-xl;
+}
+
+.btns-wrapper {
+  @apply flex gap-8;
+}
