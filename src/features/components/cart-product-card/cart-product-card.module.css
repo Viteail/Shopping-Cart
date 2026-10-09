@@ -2,7 +2,7 @@
 @import "@styles/colors.css";
 
 .product-card-wrapper {
-  @apply flex items-center gap-4 border-b border-solid border-light-border;
+  @apply flex items-center py-2 gap-4 border-b border-solid border-light-border;
 }
 
 .product-img {
