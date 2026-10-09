@@ -33,4 +33,5 @@ export type CardProductContextState = {
   handleRemoveProduct: (product: IProductData) => void;
   handleEmptyCart: () => void;
   getTotalPriceProducts: () => number;
+  getProductsQuantity: () => number;
 };

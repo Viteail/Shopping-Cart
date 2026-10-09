@@ -68,6 +68,8 @@ export const CartProductDataProvider: React.FC<
       return Number((acc + priceAfterDiscount * curr.amount).toFixed(2));
     }, 0);
 
+  const getProductsQuantity = () => cartProducts.length;
+
   return (
     <CartProductContext.Provider
       value={{
@@ -77,6 +79,7 @@ export const CartProductDataProvider: React.FC<
         handleRemoveProduct,
         handleEmptyCart,
         getTotalPriceProducts,
+        getProductsQuantity,
       }}
     >
       {children}

@@ -1,5 +1,18 @@
 @import "tailwindcss";
+@import "@styles/colors.css";
 
 .navbar {
-  @apply flex gap-5 pr-15;
+  @apply flex gap-8 pr-15;
+}
+
+.cart-link {
+  @apply relative;
+}
+
+.nav-icon {
+  @apply w-8 h-8;
+}
+
+.cart-quantity {
+  @apply absolute top-1/2 left-1/2 flex items-center justify-center h-6 w-6 rounded-full bg-red-500 text-text-main;
 }
