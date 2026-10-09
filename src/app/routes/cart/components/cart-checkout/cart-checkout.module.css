@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .cart-checkout-wrapper {
-  @apply flex justify-between items-center max-w-200 w-full p-8;
+  @apply flex justify-between items-center max-w-(--max-content-width) w-full p-8;
 }
 
 .cart-btns-wrapper {

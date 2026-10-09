@@ -2,7 +2,7 @@
 @import "@styles/colors.css";
 
 .about-container {
-  @apply flex justify-center text-text-main bg-primary;
+  @apply flex justify-center text-text-main bg-blue-800;
 }
 
 .about-wrapper {

@@ -5,9 +5,9 @@
 }
 
 .main-content {
-  @apply grid grid-cols-[repeat(auto-fill,320px)] justify-center gap-8 w-full max-w-300;
+  @apply grid grid-cols-[repeat(auto-fill,320px)] justify-center gap-8 w-full max-w-(--max-layout-width);
 }
 
 .main-loading {
-  @apply flex justify-center w-full max-w-300;
+  @apply flex justify-center w-full max-w-(--max-layout-width);
 }

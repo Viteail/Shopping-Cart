@@ -10,7 +10,7 @@
 }
 
 .secondary {
-  @apply px-4 py-2 bg-secondary;
+  @apply text-lg font-bold px-4 py-2 bg-secondary;
 }
 
 .category {

@@ -7,7 +7,7 @@
 }
 
 .wrapper {
-  @apply max-w-300 w-full flex justify-between items-center;
+  @apply max-w-(--max-layout-width) w-full flex justify-between items-center;
 }
 
 .logo-container {

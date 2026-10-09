@@ -6,5 +6,5 @@
 }
 
 .cart-headline {
-  @apply max-w-200 w-full px-10 font-bold text-xl;
+  @apply max-w-(--max-content-width) w-full px-10 font-bold text-xl;
 }

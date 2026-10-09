@@ -6,6 +6,8 @@
   --margin-none: 0;
   --padding-none: 0;
   --box-sizing-default: border-box;
+  --max-layout-width: 1200px;
+  --max-content-width: 800px;
 }
 
 *,
