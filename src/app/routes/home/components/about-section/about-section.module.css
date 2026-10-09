@@ -6,11 +6,15 @@
 }
 
 .about-wrapper {
-  @apply flex max-w-250 gap-20 py-10;
+  @apply flex max-w-(--max-layout-width) gap-20 p-10;
 }
 
 .about-img-wrapper {
-  @apply flex items-center min-w-125;
+  @apply flex items-center;
+}
+
+.about-img {
+  @apply min-w-125;
 }
 
 .about-info-wrapper {
@@ -27,4 +31,14 @@
 
 .about-text {
   @apply text-xl;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about-wrapper {
+    @apply flex-col items-center;
+  }
+
+  .about-img {
+    @apply min-w-50;
+  }
 }

@@ -5,11 +5,11 @@
 }
 
 .category-wrapper {
-  @apply flex flex-col gap-5 py-16;
+  @apply flex flex-col gap-5 p-10;
 }
 
 .cards-wrapper {
-  @apply flex gap-10;
+  @apply flex flex-wrap justify-center gap-10;
 }
 
 .category-headline {

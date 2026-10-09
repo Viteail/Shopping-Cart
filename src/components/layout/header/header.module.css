@@ -21,3 +21,9 @@
 .logo {
   @apply w-12 h-12;
 }
+
+@media only screen and (max-width: 500px) {
+  .wrapper {
+    @apply flex-col gap-8;
+  }
+}

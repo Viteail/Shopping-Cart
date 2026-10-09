@@ -2,7 +2,7 @@
 @import "@styles/colors.css";
 
 .badges-wrapper {
-  @apply flex justify-center items-center font-bold gap-10 py-5 bg-bg-light;
+  @apply flex flex-wrap justify-center items-center font-bold gap-10 p-5 bg-bg-light;
 }
 
 .badge-wrapper {

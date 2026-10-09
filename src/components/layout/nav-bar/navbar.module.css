@@ -2,7 +2,7 @@
 @import "@styles/colors.css";
 
 .navbar {
-  @apply flex gap-8 pr-15;
+  @apply flex gap-8;
 }
 
 .cart-link {
