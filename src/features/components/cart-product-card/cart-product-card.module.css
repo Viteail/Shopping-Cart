@@ -10,7 +10,7 @@
 }
 
 .product-headlines-wrapper {
-  @apply flex flex-col gap-2 max-w-75;
+  @apply flex flex-col gap-2 w-full max-w-75;
 }
 
 .product-title {
@@ -22,11 +22,11 @@
 }
 
 .price {
-  @apply line-through text-sm text-text-muted;
+  @apply line-through text-sm text-text-muted overflow-hidden text-ellipsis;
 }
 
 .discount-price {
-  @apply font-bold;
+  @apply font-bold overflow-hidden text-ellipsis;
 }
 
 .discount-wrapper {
@@ -39,4 +39,26 @@
 
 .product-footer {
   @apply flex-1 flex justify-end gap-10;
+}
+
+@media only screen and (max-width: 800px) {
+  .product-card-wrapper {
+    @apply flex-col;
+  }
+
+  .product-img {
+    @apply h-50;
+  }
+
+  .product-headlines-wrapper {
+    @apply gap-4;
+  }
+
+  .product-title {
+    @apply text-center;
+  }
+
+  .product-price-wrapper {
+    @apply justify-center;
+  }
 }

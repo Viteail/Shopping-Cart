@@ -8,7 +8,7 @@ export const CartCheckout = () => {
 
   return (
     <div className={classes["cart-checkout-wrapper"]}>
-      <div>
+      <div className={classes["cart-total-price-wrapper"]}>
         <p className={classes["cart-total-price"]}>
           Total Price: {getTotalPriceProducts()}$
         </p>

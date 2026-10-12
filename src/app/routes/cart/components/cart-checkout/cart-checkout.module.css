@@ -1,13 +1,17 @@
 @import "tailwindcss";
 
 .cart-checkout-wrapper {
-  @apply flex justify-between items-center max-w-(--max-content-width) w-full p-8;
+  @apply flex flex-wrap md:justify-between justify-center items-center max-w-(--max-content-width) w-full p-8 gap-8;
 }
 
 .cart-btns-wrapper {
   @apply flex justify-end gap-10;
 }
 
+.cart-total-price-wrapper {
+  @apply max-w-75;
+}
+
 .cart-total-price {
-  @apply text-xl font-bold;
+  @apply whitespace-nowrap overflow-hidden text-ellipsis text-center text-xl font-bold;
 }
