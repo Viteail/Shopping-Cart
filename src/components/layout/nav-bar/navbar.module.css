@@ -5,14 +5,18 @@
   @apply flex gap-8;
 }
 
+.navbar > a {
+  @apply flex items-center gap-2;
+}
+
 .cart-link {
   @apply relative;
 }
 
 .nav-icon {
-  @apply w-8 h-8;
+  @apply w-6 h-6 sm:w-8 sm:h-8;
 }
 
 .cart-quantity {
-  @apply absolute top-1/2 left-1/2 flex items-center justify-center h-6 w-6 rounded-full bg-red-500 text-text-main;
+  @apply absolute top-1/2 left-1/4 flex items-center justify-center h-6 w-6 rounded-full bg-red-500 text-text-main;
 }

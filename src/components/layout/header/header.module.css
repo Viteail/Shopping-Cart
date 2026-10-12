@@ -22,7 +22,7 @@
   @apply w-12 h-12;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
   .wrapper {
     @apply flex-col gap-8;
   }

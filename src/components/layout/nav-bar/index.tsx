@@ -16,12 +16,15 @@ export const NavBar = () => {
     <div className={classes.navbar}>
       <Link to="/home">
         <img className={classes["nav-icon"]} src={homeIcon} alt="home" />
+        <p>Home</p>
       </Link>
       <Link to="/shop">
         <img className={classes["nav-icon"]} src={shopIcon} alt="shop" />
+        <p>Shop</p>
       </Link>
       <Link className={classes["cart-link"]} to="/cart">
         <img className={classes["nav-icon"]} src={cartIcon} alt="cart" />
+        <p>Cart</p>
         {quantity !== 0 && (
           <p className={classes["cart-quantity"]}>{quantity}</p>
         )}
