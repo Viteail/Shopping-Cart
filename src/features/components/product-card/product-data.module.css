@@ -2,7 +2,7 @@
 @import "@styles/colors.css";
 
 .product-wrapper {
-  @apply flex flex-col gap-5 w-80 min-h-117.5 p-4 border rounded-xl border-solid border-secondary;
+  @apply flex flex-col gap-5 min-h-117.5 p-4 border rounded-xl border-solid border-secondary;
 }
 
 .product-img-wrapper {
