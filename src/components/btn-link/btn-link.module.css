@@ -2,5 +2,9 @@
 @import "@styles/colors.css";
 
 .link {
-  @apply inline-block rounded-sm px-4 py-2 bg-secondary;
+  @apply text-lg font-bold inline-block rounded-sm p-4 bg-secondary;
+}
+
+.link:hover {
+  @apply bg-hover-secondary;
 }

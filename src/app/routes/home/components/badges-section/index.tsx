@@ -1,5 +1,6 @@
-import classes from "../../home.module.css";
-import { Icon } from "@components/index";
+import classes from "./badge-section.module.css";
+
+import { Icon } from "@components/icon";
 
 import iconShipping from "@images/shipping.svg";
 import iconSecure from "@images/secure.svg";

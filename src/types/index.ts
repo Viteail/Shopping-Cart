@@ -9,7 +9,7 @@ export interface IProductData {
   discountPercentage: number;
   stock: number;
   image: string;
-  warrantyInformation: string; 
+  warrantyInformation: string;
 }
 
 export interface ICartProductData {
@@ -29,4 +29,9 @@ export type ProductsContextState = {
 export type CardProductContextState = {
   data: ICartProductData[];
   handleAddToCart: (product: IProductData, amount: number) => void;
+  handleChangeAmount: (product: IProductData, amount: number) => void;
+  handleRemoveProduct: (product: IProductData) => void;
+  handleEmptyCart: () => void;
+  getTotalPriceProducts: () => number;
+  getProductsQuantity: () => number;
 };

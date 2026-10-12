@@ -2,7 +2,7 @@ import classes from "./input.module.css";
 
 interface IInputProps {
   type: React.HTMLInputTypeAttribute;
-  value: number;
+  value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement, HTMLInputElement>) => void;
 }
 

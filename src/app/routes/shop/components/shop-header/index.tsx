@@ -1,6 +1,6 @@
 import classes from "./shop-header.module.css";
 
-import { Button } from "@components/index";
+import { Button } from "@components/button";
 
 import type { ActiveCategory, ProductsCategories } from "@/types/index";
 import type { AvailableClass } from "@components/button";

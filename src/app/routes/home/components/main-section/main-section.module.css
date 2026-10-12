@@ -1,0 +1,28 @@
+@import "tailwindcss";
+@import "@styles/colors.css";
+
+.wrapper-section {
+  @apply flex justify-center bg-[url("@images/laptop-main.webp")] bg-blue-950 bg-blend-soft-light bg-center bg-cover;
+}
+
+.main-section {
+  @apply flex flex-col gap-10 min-h-125 max-w-(--max-layout-width) w-full p-12 text-text-main;
+}
+
+.main-headline {
+  @apply font-bold text-6xl;
+}
+
+.sub-headline {
+  @apply text-xl;
+}
+
+.btns-wrapper {
+  @apply flex gap-8;
+}
+
+@media only screen and (max-width: 500px) {
+  .btns-wrapper {
+    @apply flex-col items-center;
+  }
+}

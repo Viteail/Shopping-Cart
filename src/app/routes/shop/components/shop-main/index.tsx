@@ -13,26 +13,19 @@ interface IShopMainProps {
 export const ShopMain: React.FC<IShopMainProps> = (props) => {
   const { productDatas, status } = props;
 
-  const attachContent = (isLoading: boolean) => {
-    if (isLoading)
-      return (
+  return (
+    <div className={classes["main-wrapper"]}>
+      {status === "loading" ? (
         <div className={classes["main-loading"]}>
           <ShopLoading />
         </div>
-      );
-    else
-      return (
-        <div className={classes["main-container"]}>
+      ) : (
+        <div className={classes["main-content"]}>
           {productDatas.map((data) => (
             <ProductCard data={data} key={data.id}></ProductCard>
           ))}
         </div>
-      );
-  };
-
-  return (
-    <div className={classes["main-wrapper"]}>
-      {attachContent(status === "loading")}
+      )}
     </div>
   );
 };

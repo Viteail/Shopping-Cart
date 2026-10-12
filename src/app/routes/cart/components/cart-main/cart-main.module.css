@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@import "@styles/colors.css";
+
+.main-wrapper {
+  @apply flex flex-col items-center py-8;
+}
+
+.main-content {
+  @apply flex flex-col gap-8 p-4 max-w-(--max-content-width) w-full rounded-xl bg-bg-light;
+}
+
+@media only screen and (max-width: 800px) {
+  .main-content {
+    @apply max-w-100;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .main-content {
+    @apply max-w-75;
+  }
+}

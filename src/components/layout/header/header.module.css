@@ -1,5 +1,29 @@
+@import "tailwindcss";
 @import "@styles/colors.css";
+@import "@styles/fonts.css";
 
 .header {
-  @apply flex justify-between items-center px-10 py-2 text-text-main bg-bg-base;
+  @apply flex justify-center px-10 py-5 text-text-main bg-bg-base;
+}
+
+.wrapper {
+  @apply max-w-(--max-layout-width) w-full flex justify-between items-center;
+}
+
+.logo-container {
+  @apply flex items-center gap-2;
+}
+
+.logo-text {
+  @apply font-montserrat text-2xl font-extrabold italic;
+}
+
+.logo {
+  @apply w-12 h-12;
+}
+
+@media only screen and (max-width: 600px) {
+  .wrapper {
+    @apply flex-col gap-8;
+  }
 }

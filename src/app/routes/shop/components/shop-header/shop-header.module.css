@@ -6,7 +6,7 @@
 }
 
 .shop-wrapper {
-  @apply flex gap-20;
+  @apply flex justify-center gap-10;
 }
 
 .btns-wrapper {
@@ -15,4 +15,13 @@
 
 .main-headline {
   @apply font-bold text-xl;
+}
+
+@media only screen and (max-width: 600px) {
+  .shop-wrapper {
+    @apply flex-col items-center;
+  }
+  .btns-wrapper {
+    @apply flex-col justify-center gap-10;
+  }
 }
