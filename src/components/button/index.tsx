@@ -11,7 +11,7 @@ export type AvailableClass =
   | "cart"
   | "remove"
   | "cancel"
-  | "purchase"
+  | "purchase";
 
 interface IButonProps {
   children: React.ReactNode;

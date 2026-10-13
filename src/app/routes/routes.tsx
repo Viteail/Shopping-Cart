@@ -5,7 +5,7 @@ import { Home } from "./home";
 
 import { Navigate } from "react-router";
 
-const routes = [
+export const routes = [
   {
     path: "/",
     element: <App />,
