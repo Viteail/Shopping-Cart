@@ -7,7 +7,6 @@ export interface IProductData {
   title: string;
   price: number;
   discountPercentage: number;
-  stock: number;
   image: string;
   warrantyInformation: string;
 }

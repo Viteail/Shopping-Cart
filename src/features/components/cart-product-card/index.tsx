@@ -39,7 +39,7 @@ export const CartProductCard: React.FC<ICartProductCardProps> = (props) => {
   }, [product, inputValue.numberValue]);
 
   return (
-    <div className={classes["product-card-wrapper"]}>
+    <div data-testid="cart-product-card" className={classes["product-card-wrapper"]}>
       <div>
         <img
           className={classes["product-img"]}

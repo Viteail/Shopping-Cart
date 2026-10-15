@@ -22,42 +22,45 @@ export const ShopHeader: React.FC<IShopHeaderProps> = (props) => {
             onClick={() =>
               handleActiveCategory(["laptop", "smartphone", "audio"])
             }
-            classesToAppend={
-              ["category", `${activeCategory === "all" && "active"}`].filter(
-                Boolean,
-              ) as AvailableClass[]
-            }
+            classesToAppend={[
+              "category",
+              ...((activeCategory === "all"
+                ? ["active"]
+                : []) as AvailableClass[]),
+            ]}
           >
             All
           </Button>
           <Button
             onClick={() => handleActiveCategory(["laptop"])}
-            classesToAppend={
-              ["category", `${activeCategory === "laptop" && "active"}`].filter(
-                Boolean,
-              ) as AvailableClass[]
-            }
+            classesToAppend={[
+              "category",
+              ...((activeCategory === "laptop"
+                ? ["active"]
+                : []) as AvailableClass[]),
+            ]}
           >
             Laptops
           </Button>
           <Button
             onClick={() => handleActiveCategory(["smartphone"])}
-            classesToAppend={
-              [
-                "category",
-                `${activeCategory === "smartphone" && "active"}`,
-              ].filter(Boolean) as AvailableClass[]
-            }
+            classesToAppend={[
+              "category",
+              ...((activeCategory === "smartphone"
+                ? ["active"]
+                : []) as AvailableClass[]),
+            ]}
           >
             Smartphones
           </Button>
           <Button
             onClick={() => handleActiveCategory(["audio"])}
-            classesToAppend={
-              ["category", `${activeCategory === "audio" && "active"}`].filter(
-                Boolean,
-              ) as AvailableClass[]
-            }
+            classesToAppend={[
+              "category",
+              ...((activeCategory === "audio"
+                ? ["active"]
+                : []) as AvailableClass[]),
+            ]}
           >
             Audio
           </Button>

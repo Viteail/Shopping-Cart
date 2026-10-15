@@ -32,7 +32,7 @@ export const ProductCard: React.FC<IProductDataProps> = (props) => {
   const { handleAddToCart } = useCartProductData();
 
   return (
-    <div className={classes["product-wrapper"]}>
+    <div data-testid="product-card" className={classes["product-wrapper"]}>
       <div className={classes["product-img-wrapper"]}>
         <img
           className={classes["product-img"]}

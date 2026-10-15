@@ -11,9 +11,10 @@ import { useCategory } from "../../app/routes/shop/hooks/useCategory";
 
 interface IProductDataProviderProps {
   children: React.ReactNode;
+  initialProducts?: ProductDTO[];
 }
 
-type ProductDTO = {
+export type ProductDTO = {
   id: number;
   title: string;
   description: string;
@@ -44,9 +45,12 @@ type DummyJsonResponse = {
   limit: number;
 };
 
-type ProductDTOState = { data: ProductDTO[]; status: FetchStatus };
+export type ProductDTOState = { data: ProductDTO[]; status: FetchStatus };
 
-const useProductsRepo = (cats: ProductsCategories[]) => {
+const useProductsRepo = (
+  cats: ProductsCategories[],
+  initialProducts?: ProductDTO[],
+) => {
   const [productData, setProductData] = useState<ProductDTOState>({
     data: [],
     status: "stale",
@@ -71,13 +75,22 @@ const useProductsRepo = (cats: ProductsCategories[]) => {
     }
   };
 
-  // oxlint-disable-next-line react/set-state-in-effect
-  useEffect(() => void getProducts(cats).then(), [cats]);
+  useEffect(() => {
+    if (initialProducts !== undefined) {
+      return;
+    }
+
+    // oxlint-disable-next-line react/set-state-in-effect
+    void getProducts(cats).then();
+  }, [cats, initialProducts]);
 
   return {
     getProducts,
-    data: productData.data,
-    status: productData.status,
+    data: initialProducts ?? productData.data,
+    status:
+      initialProducts !== undefined
+        ? ("finished" as FetchStatus)
+        : productData.status,
   };
 };
 
@@ -86,7 +99,6 @@ const productsMapper = (dto: ProductDTO[]): IProductData[] =>
     id: d.id,
     title: d.title,
     discountPercentage: d.discountPercentage,
-    stock: d.stock,
     price: d.price,
     image: d.images[0],
     warrantyInformation: d.warrantyInformation,
@@ -95,19 +107,23 @@ const productsMapper = (dto: ProductDTO[]): IProductData[] =>
 export const ProductDataProvider: React.FC<IProductDataProviderProps> = (
   props,
 ) => {
-  const { children } = props;
+  const { children, initialProducts } = props;
 
   const initCats = useMemo<ProductsCategories[]>(
     () => ["laptop", "smartphone", "audio"],
     [],
   );
-  const { data, status, getProducts } = useProductsRepo(initCats);
+  const { data, status, getProducts } = useProductsRepo(
+    initCats,
+    initialProducts,
+  );
   const { activeCategory, setActiveCategory } = useCategory(initCats);
 
   const products = useMemo(() => productsMapper(data), [data]);
 
   const handleActiveCategory = async (category: ProductsCategories[]) => {
-    await getProducts(category);
+    if (initialProducts === undefined) await getProducts(category);
+
     setActiveCategory(() => {
       if (category.length === 3) return "all";
       else return category[0];
