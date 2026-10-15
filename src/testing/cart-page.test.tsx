@@ -1,4 +1,4 @@
-import { beforeEach, describe, expect, it } from "vitest";
+import { describe, expect, it } from "vitest";
 import { renderWithProviders } from "./test-utils";
 import { mockProducts } from "./mock-products";
 import routes from "../app/routes/routes";
