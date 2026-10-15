@@ -14,9 +14,9 @@
 }
 
 .nav-icon {
-  @apply w-6 h-6 sm:w-8 sm:h-8;
+  @apply w-6 h-6;
 }
 
 .cart-quantity {
-  @apply absolute top-1/2 left-1/4 flex items-center justify-center h-6 w-6 rounded-full bg-red-500 text-text-main;
+  @apply absolute top-1/2 left-1/4 flex items-center justify-center text-sm min-h-5 min-w-5 rounded-full bg-red-500 text-text-main;
 }
